@@ -2367,3 +2367,77 @@ button {
         scroll-behavior: auto !important;
     }
 }
+
+
+
+
+
+/* code for projects section  */
+
+/* Project screenshot and fallback preview */
+.project-image-wrapper {
+.project-image-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: inherit;
+}
+
+.project-image-wrapper > .project-visual {
+    width: 100%;
+}
+
+.project-screenshot {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    z-index: 1;
+}
+
+/* Project destination links */
+.project-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 0 0 20px;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 9px 14px;
+    border: 1px solid currentColor;
+    border-radius: 6px;
+    color: inherit;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.project-link:hover {
+    opacity: 0.75;
+    transform: translateY(-2px);
+}
+
+.project-link:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+}
+
+@media (max-width: 600px) {
+    .project-actions {
+        gap: 8px;
+    }
+
+    .project-link {
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+}
