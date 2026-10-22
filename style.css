@@ -2375,7 +2375,7 @@ button {
 /* code for projects section  */
 
 /* Project screenshot and fallback preview */
-.project-image-wrapper {
+
 .project-image-wrapper {
     position: relative;
     width: 100%;
@@ -2399,45 +2399,79 @@ button {
 }
 
 /* Project destination links */
+
+/* Project action buttons */
 .project-actions {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     gap: 12px;
-    padding: 0 0 20px;
+    padding: 16px 0 20px;
 }
 
+/* Shared button styling */
 .project-link {
     display: inline-flex;
     align-items: center;
-    gap: 7px;
-    padding: 9px 14px;
-    border: 1px solid currentColor;
-    border-radius: 6px;
-    color: inherit;
+    justify-content: center;
+    gap: 8px;
+    padding: 11px 18px;
+    border: 1px solid #ffffffff;
+    border-radius: 8px;
+    background: #ffffffff;
+    color: #000000;
     text-decoration: none;
     font-size: 14px;
     font-weight: 600;
-    transition: opacity 0.2s ease, transform 0.2s ease;
+    line-height: 1.4;
+    cursor: pointer;
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
+/* Hover effect */
 .project-link:hover {
-    opacity: 0.75;
+    background: #050505;
+    border-color: #b8ff46;
+    color: #b8ff46;
     transform: translateY(-2px);
+    box-shadow: 0 5px 14px rgba(126, 240, 84, 0.2);
 }
 
+/* GitHub button: outlined style */
+.project-link.github-link {
+    background: transparent;
+    color: inherit;
+    border-color: currentColor;
+}
+
+.project-link.github-link:hover {
+    background: #171717;
+    border-color: #171717;
+    color: #ffffff;
+}
+
+/* Keyboard accessibility */
 .project-link:focus-visible {
-    outline: 2px solid currentColor;
-    outline-offset: 4px;
+    outline: 3px solid #93c5fd;
+    outline-offset: 3px;
 }
 
+/* Mobile styling */
 @media (max-width: 600px) {
     .project-actions {
-        gap: 8px;
+        gap: 10px;
+        padding-top: 14px;
     }
 
     .project-link {
+        padding: 10px 14px;
         font-size: 14px;
-        padding: 10px 12px;
     }
 }
+
+
